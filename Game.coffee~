@@ -1,0 +1,10 @@
+module.exports = class Engine
+ constructor: () ->
+   
+ useField: (@field) ->
+ 
+ useDrawer: (@drawer) ->
+   
+ doTurn: () ->
+   @drawer.draw @field
+
