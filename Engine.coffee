@@ -5,29 +5,19 @@ module.exports = class Engine
    
  
  doTurn: ()->
-  
   next = []
   for row, y in @field
     next[y] = []
     for cell, x in row
       next[y][x] = @isStillAlive cell, x, y
-      
-      #process.stdout.write if @next[y][x] then "alive] " else "dead] "
-    #process.stdout.write '\n'
   
+  # copy array back in field
   for row, y in next
     for cell, x in row
       @field[y][x] = cell
-  
-  
 
-
-      
-  
  isStillAlive: (wasAlive, x,y) ->
-    
     neighbors = @countNeighbors x, y
-    #process.stdout.write "["+neighbors
     return true if !wasAlive and neighbors == 3
     return false if wasAlive and neighbors < 2
     return true if wasAlive and 2 <= neighbors <= 3
