@@ -1,0 +1,14 @@
+1.) install node on debian:
+http://howtonode.org/how-to-install-nodejs
+
+2.) install coffeescript:
+sudo npm install -g coffee-script
+
+3.) clone project:
+git clone https://github.com/macrozone/gameoflife
+cd gameoflife
+
+3.) launch:
+coffee app.coffee
+
+
