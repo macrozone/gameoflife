@@ -1,0 +1,15 @@
+module.exports = class extends Drawer
+ constructor: () ->
+   @turns = 0
+   @startTime = new Date().getTime()
+ useField: (@field) ->
+   
+ draw: () ->
+   now = new Date().getTime()
+   duration = now - @startTime
+   
+   turnsPerSecond = @turns / duration
+   console.log "turn: #{@turns}, turns per second #{turnsPerSecond}";
+   @turns++
+
+

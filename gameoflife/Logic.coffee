@@ -1,15 +1,20 @@
-module.exports = class Engine
+module.exports = class
  constructor: () ->
-   
+  
  useField: (@field) ->
-   
+ 
+ getField: () ->
+   @field
+ 
  
  doTurn: ()->
   next = []
   for row, y in @field
+
     next[y] = []
     for cell, x in row
       next[y][x] = @isStillAlive cell, x, y
+      
   
   # copy array back in field
   for row, y in next

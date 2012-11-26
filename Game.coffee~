@@ -1,6 +1,6 @@
 module.exports = class Game
   constructor: () ->
-    @stepTime = 0
+    @stepTime = 10
   setStepTime: (@stepTime) ->
   useEngine: (@engine) ->
   useDrawer: (@drawer) ->

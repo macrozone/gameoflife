@@ -1,0 +1,30 @@
+FieldCreator = require './FieldCreator'
+ConsoleDrawer = require './drawers/ConsoleDrawer'
+StatsDrawer = require './drawers/StatsDrawer'
+Engine = require './Engine'
+Game = require './Game'
+
+child_process = require 'child_process'
+
+fieldCreator = new FieldCreator
+fieldCreator.setWidth 80
+fieldCreator.setHeight 60
+fieldCreator.setPossibility 0.5
+field = fieldCreator.createRandom()
+
+
+app = new Game()
+
+app.setStepTime 10
+
+engine = new Engine()
+
+app.addDrawer new ConsoleDrawer()
+
+#app.addDrawer new StatsDrawer()
+app.useEngine engine
+app.useField field
+
+
+
+app.start()
