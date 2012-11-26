@@ -1,5 +1,6 @@
-1.) install node on debian:
+1.) install node:
 http://howtonode.org/how-to-install-nodejs
+http://nodejs.org
 
 2.) install coffeescript:
 sudo npm install -g coffee-script
