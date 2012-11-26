@@ -10,7 +10,7 @@ module.exports = class extends require('./DrawerAbstract')
    now = new Date().getTime()
    duration = now - @startTime
    
-   turnsPerSecond = @turns / duration
+   turnsPerSecond = @turns / duration*1000
    console.log "turn: #{@turns}\tturns per second:#{turnsPerSecond}\tDuration: #{Math.round(duration/1000)}s";
    @turns++
 

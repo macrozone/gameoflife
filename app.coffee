@@ -1,7 +1,7 @@
 gol = require './gameoflife/app.coffee'
 
 fieldCreator = new gol.FieldCreator()
-fieldCreator.setWidth 80
+fieldCreator.setWidth 160
 fieldCreator.setHeight 60
 fieldCreator.setPossibility 0.5
 
@@ -11,7 +11,7 @@ field = fieldCreator.createRandom()
 
 app = gol.create()
 
-app.setStepTime 10
+app.setStepTime 1
 
 logic = new gol.Logic()
 

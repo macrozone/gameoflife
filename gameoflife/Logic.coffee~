@@ -1,6 +1,4 @@
-spawn = require("child_process").spawn
-
-module.exports = class Engine
+module.exports = class
  constructor: () ->
   
  useField: (@field) ->

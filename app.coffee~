@@ -1,28 +1,24 @@
-FieldCreator = require './FieldCreator'
-ConsoleDrawer = require './drawers/ConsoleDrawer'
-StatsDrawer = require './drawers/StatsDrawer'
-Engine = require './Engine'
-Game = require './Game'
+gol = require './gameoflife/app.coffee'
 
-child_process = require 'child_process'
-
-fieldCreator = new FieldCreator
+fieldCreator = new gol.FieldCreator()
 fieldCreator.setWidth 80
 fieldCreator.setHeight 60
 fieldCreator.setPossibility 0.5
+
+
 field = fieldCreator.createRandom()
 
 
-app = new Game()
+app = gol.create()
 
 app.setStepTime 10
 
-engine = new Engine()
+logic = new gol.Logic()
 
-app.addDrawer new ConsoleDrawer()
+app.addDrawer new gol.ConsoleDrawer()
 
-#app.addDrawer new StatsDrawer()
-app.useEngine engine
+#app.addDrawer new gol.StatsDrawer()
+app.useLogic logic
 app.useField field
 
 

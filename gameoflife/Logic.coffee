@@ -1,23 +1,24 @@
 module.exports = class
  constructor: () ->
-  
+   @next = []
  useField: (@field) ->
+
  
  getField: () ->
    @field
  
  
  doTurn: ()->
-  next = []
+  
   for row, y in @field
 
-    next[y] = []
+    if not @next[y]? then @next[y] = []
     for cell, x in row
-      next[y][x] = @isStillAlive cell, x, y
+      @next[y][x] = @isStillAlive cell, x, y
       
   
   # copy array back in field
-  for row, y in next
+  for row, y in @next
     for cell, x in row
       @field[y][x] = cell
 
