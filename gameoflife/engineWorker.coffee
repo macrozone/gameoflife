@@ -1,3 +1,5 @@
+# used later for multiprocessor-engine, not working yet!
+
 Engine = require('./Engine')
 engineWorker = {}
 #engineWorker.on 'doTurn', () ->
@@ -10,8 +12,6 @@ process.on 'message', (m) =>
     when 'init' 
       engine.useField m.field
       process.send {id: 'ready'}
-     
- 
       
     when 'doTurn' 
       field = engine.getField()
@@ -19,5 +19,4 @@ process.on 'message', (m) =>
       engine.doTurn()
       process.send {id: "done", field: engine.getField()}
       
-  
   
