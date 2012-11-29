@@ -1,6 +1,4 @@
-class FieldCreator
- 
-  
+module.exports = class
   constructor: () ->
    @possibility = 0.25
    @width = 10
@@ -15,9 +13,5 @@ class FieldCreator
   createRandom: () ->
     (@randomCell() for a in [0..@width-1] for b in [0..@height-1])
     
-      
-    
   randomCell: () ->
     if Math.random() < @possibility then true else false
-  
-module.exports = FieldCreator
