@@ -1,3 +1,5 @@
+## this module is not working yet
+
 module.exports = class
   constructor: () ->
     @drawers = []
