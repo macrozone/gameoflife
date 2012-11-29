@@ -1,4 +1,4 @@
-gol = require './gameoflife/app.coffee'
+gol = require './gameoflife'
 
 fieldCreator = new gol.FieldCreator()
 fieldCreator.setWidth 160
