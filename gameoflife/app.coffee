@@ -4,6 +4,6 @@ module.exports =
   ConsoleDrawer: require('./drawers/ConsoleDrawer')
   StatsDrawer: require('./drawers/StatsDrawer')
   create: ->
-    new require('./Engine')
+    new (require './Engine')
   createMulticore: ->
-    new require('./MulticoreEngine')
+    new (require './MulticoreEngine')
