@@ -2,7 +2,7 @@ gol = require './gameoflife/app.coffee'
 
 fieldCreator = new gol.FieldCreator()
 fieldCreator.setWidth 160
-fieldCreator.setHeight 60
+fieldCreator.setHeight 40
 fieldCreator.setPossibility 0.5
 
 
